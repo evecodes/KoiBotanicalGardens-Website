@@ -1,2 +1,2 @@
 # KoiBotanicalGardens-Website
- Website for a fictional garden
+ Website for a fictional garden.

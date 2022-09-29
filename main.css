@@ -1,0 +1,18 @@
+:root {
+    --key-color: ;
+    --main-color: hsl(0, 0%, 0%);
+    --secondary-color: hsl(100, 100%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important; */
+}
+
+p {
+    color: red;
+}
