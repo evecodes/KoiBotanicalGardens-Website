@@ -1,18 +1,68 @@
 :root {
-    --key-color: ;
+    --key-color: hsl(42, 100%, 50%);
+    --key-color-15percent: hsla(42, 100%, 50%, 0.15);
     --main-color: hsl(0, 0%, 0%);
     --secondary-color: hsl(100, 100%, 100%);
+    --tertiary-color: hsl(234, 100%, 6%);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     /* background: #000 !important;
     color: #0f0 !important;
     outline: solid #f00 1px !important; */
 }
 
-p {
-    color: red;
+h1, h2 {
+    font-family: 'Cardo', serif;
 }
+
+nav {
+}
+
+a {
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h3, p {
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h4 {
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.text-highlight {
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.icon-small {
+    height: 2rem;
+}
+
+
+
+/* Reminder notes: 
+    >>Nav height needed Safari
+    >>flex img items within need position Safari 
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+*/
