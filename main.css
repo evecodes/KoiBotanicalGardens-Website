@@ -16,17 +16,33 @@
     outline: solid #f00 1px !important; */
 }
 
-h1, h2 {
+h1 {
+    display: inline-block;
+    font-size: 6rem;
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: center;
+    color:var(--secondary-color);
+}
+
+h2 {
     font-family: 'Cardo', serif;
 }
 
-nav {
+a {
+    font-size: 1.2rem;
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--secondary-color);
 }
 
-a {
-    font-family: brandon-grotesque, sans-serif;
-    font-weight: 400;
-    font-style: normal;
+a:hover {
+    color: var(--key-color);
 }
 
 h3, p {
@@ -51,6 +67,72 @@ h4 {
     height: 2rem;
 }
 
+/* Nav section */
+
+nav {
+    position: fixed;
+    height: 4rem;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    height: 4rem;
+    gap: 2rem;
+    list-style: none; 
+    margin-right: 3%;
+    text-transform: lowercase;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Home section */
+
+.home-img {
+    position: absolute;
+    top: 0;
+    height: 85%;
+    width: 100%;
+    z-index: -1; /* TO CHANGE */
+    overflow: hidden;
+}
+
+.home-img > img {
+    /* opacity: 0.5; */
+    transform: translateY(-30%);
+    max-width: 100%;
+}
+
+.logo-large {
+    height: 5rem;
+}
+
+.title-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    height: 80vh;
+    /* background-color: rgba(50, 211, 157, 0.39); */
+}
+
+.index {
+    z-index: 0;
+}
+
+.gradient-top {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 7rem;
+    width: 100%;
+    opacity: 0.3;
+    background: linear-gradient(0deg, rgba(0,3,32,0) 0%, rgba(2,0,36,1) 100%);
+}
 
 
 /* Reminder notes: 
