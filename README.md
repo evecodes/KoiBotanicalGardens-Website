@@ -7,3 +7,5 @@
  Update 02 - Home and nav sections CSS added.
 
  Update 03 - Home section expanded, more CSS added.
+
+ Update 04 - Garden section CSS added, Tearoom section CSS base.
