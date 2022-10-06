@@ -11,3 +11,5 @@
  Update 04 - Garden section CSS added, Tearoom section CSS base.
 
  Update 05 - Garden section expanded, fixed image issues.
+
+ Update 06 - Contact section base added, other sections more css added/changed.
