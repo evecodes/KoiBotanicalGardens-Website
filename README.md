@@ -9,3 +9,5 @@
  Update 03 - Home section expanded, more CSS added.
 
  Update 04 - Garden section CSS added, Tearoom section CSS base.
+
+ Update 05 - Garden section expanded, fixed image issues.
