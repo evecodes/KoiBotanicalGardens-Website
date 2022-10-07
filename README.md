@@ -13,3 +13,5 @@
  Update 05 - Garden section expanded, fixed image issues.
 
  Update 06 - Contact section base added, other sections more css added/changed.
+
+ Update 07 - Refined the CSS in all sections.

@@ -66,7 +66,8 @@ a:hover {
 }
 
 .icon-small {
-    height: 2rem;
+    padding-right: 0.8rem;
+    height: 3.2rem;
 }
 
 .outer-box{
@@ -109,13 +110,37 @@ a:hover {
     /* width: 100%; */
 }
 
+.grid-horizontal-narrow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+}
+
 .grid-vertical {
     display: grid;
     grid-template: 1fr / 1fr;
 }
 
+/*  
+    display: grid;
+    grid-template: 1fr 15rem 5rem / 1fr;
+    align-items: start;
+    justify-items: center; 
+*/
+
 .button-regular {
-    width: 10rem;
+    /* white-space: no-wrap; */
+    font-size: 1.6rem;
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 2rem;
+    width: 15rem; /*Change*/
+    height: 4rem;
+    border: none;
+    border-radius: 10rem;
+    color: var(--secondary-color);
+    background-color: var(--main-color);
 }
 
 
@@ -216,7 +241,7 @@ nav {
 .card {
     width: auto;
     margin: auto;
-    height: 25rem;
+    height: 30rem;
     background-color: var(--key-color-15percent);
     border-radius: 1rem;
     overflow: hidden;
@@ -237,7 +262,7 @@ nav {
 }
 
 .card-title {
-    font-size: 1.9rem;
+    font-size: 2.2rem;
     font-weight: 400;
     font-style: italic;
     margin-bottom: 0.7rem;
@@ -250,7 +275,7 @@ nav {
 }
 
 .card-text > p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 400;
     font-style: normal;
 }
@@ -273,16 +298,40 @@ nav {
     object-fit: cover;
 }
 
+.grid-section > p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: normal;
+}
+
 
 /*Contact section*/
 
 .color-box {
     margin-top: 5rem;
     padding-top: 0.5rem;
-    padding-bottom: 3rem;
+    padding-bottom: 6rem;
     background-color: var(--key-color);
 }
 
+.info-block {
+    align-items: flex-start;
+    justify-content: start;
+}
+
+.info-block > h4 {
+    margin-top: 2.3rem;
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.info-block > p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: normal;
+}
 
 
 /* Reminder notes: 
