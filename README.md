@@ -15,3 +15,5 @@
  Update 06 - Contact section base added, other sections more css added/changed.
 
  Update 07 - Refined the CSS in all sections.
+
+ Update 08 - Refined the CSS in all sections, made beginning to mobile version website.
