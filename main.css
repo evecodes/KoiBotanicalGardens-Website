@@ -3,6 +3,7 @@
     --key-color-15percent: hsla(42, 100%, 50%, 0.15);
     --main-color: hsl(0, 0%, 0%);
     --secondary-color: hsl(100, 100%, 100%);
+    --secondary-color-30percent: hsla(100, 100%, 100%, 0.3);
     --tertiary-color: hsl(234, 100%, 6%);
 }
 
@@ -410,9 +411,79 @@ nav {
 /*Media queries*/
 
 @media screen and (max-width: 35rem) {
-    /*Home page*/
-    /**/
 
+    a {
+        font-size: 2rem;
+        color: var(--main-color);
+    }
+
+    a:hover {
+        color: var(--secondary-color);
+    }
+
+    .title-margin {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    /*Nav*/
+    /* nav {
+        background-color: var(--secondary-color-30percent);
+    } */
+
+    .navbar {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: var(--key-color);
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .hamburger-stripe {
+        position: absolute;
+        top: 20%;
+        right: 3%;
+        height: 0.3rem;
+        width: 2rem;
+        border-radius: 3rem;
+        background-color: var(--secondary-color);
+        cursor: pointer;
+        z-index: 400;
+    }
+
+    .hamburger-stripe:hover {
+        background-color: var(--main-color);
+    }
+
+    .nav-hide {
+        display: none;
+        visibility: hidden;
+    } /*JS class*/
+
+    /* Hamburger stripe white on picture, stripe black on normal, JS?*/
+
+
+    /*Home page*/
+    h1 {
+        font-size: clamp(2rem, 15vw, 8rem);
+        text-align: left;
+    }
+
+    .outer-box-title {
+        width: min(85%, 120rem);
+    }
+    
+    .title-breakline {
+        width: clamp(65vw, 80vw, 10rem);
+    }
+
+    .logo-large {
+        height: 2rem;
+    }
 
     /*Garden page*/
     .mobile-hide {
@@ -422,7 +493,7 @@ nav {
     }
 
     .desktop-hide {
-        display: block;
+        display: flex;
     }
 
     .flex-row {
@@ -432,11 +503,15 @@ nav {
     .card {
         width: auto;
         margin: auto;
-        height: auto;
+        height: 40rem;
         background-color: var(--key-color-15percent);
-        border-radius: 1rem;
+        border-radius: 0rem;
         overflow: hidden;
-        margin-bottom: 7rem;
+        margin-bottom: 3rem;
+    }
+
+    .card-title {
+        font-size: 1.3rem;
     }
 
     .card-image {
@@ -452,6 +527,10 @@ nav {
         width: 80%;
     }
 
+    .card-text > p {
+        font-size: 1rem;
+    }
+
 
     /*Tea page*/
     .grid-horizontal {
@@ -462,9 +541,21 @@ nav {
         width: 100%;
     }
 
-
     /*Contact page*/
 }
+
+
+@media screen and (max-width: 25em) {
+    .outer-box {
+        width: 100%;
+    }
+
+    /*Garden page*/
+    .card-title {
+        margin: 0;
+    }
+}
+
 
 
 
