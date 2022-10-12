@@ -189,6 +189,21 @@ nav {
     align-items: center;
 }
 
+.nav-active {
+    border-bottom: 0.2rem solid var(--secondary-color);
+}
+
+.nav-active:hover {
+    border-bottom: 0.2rem solid var(--key-color);
+}
+
+.logo-small {
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    height: 2rem;
+}
+
 
 /* Home section */
 
@@ -422,9 +437,16 @@ nav {
     }
 
     .title-margin {
-        font-size: 2rem;
-        text-align: center;
+        margin-top: 4.5rem;
+        margin-bottom: 2rem;
     }
+
+    .title-section {
+        font-size: 2rem;
+        text-align: center;        
+    }
+
+    /*LOGO top left, desktop/mobile*/
 
     /*Nav*/
     /* nav {
@@ -455,6 +477,27 @@ nav {
         z-index: 400;
     }
 
+    .hamburger-stripe:before {
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: 0;
+        width: 2rem;
+        height: 0.3rem;
+        background-color: var(--key-color-15percent);
+    }
+
+    .hambuger-stripe:after {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 0;
+        width: 2rem;
+        height: 0.3rem;
+        background-color: var(--secondary-color);
+    } /*Fix missing after*/
+
+
     .hamburger-stripe:hover {
         background-color: var(--main-color);
     }
@@ -476,9 +519,23 @@ nav {
     .outer-box-title {
         width: min(85%, 120rem);
     }
+
+    .intro-box {
+        margin-top: clamp(2rem, 5vh, 3rem);
+        margin-bottom: 3rem;
+        width: min(85%, 60rem);
+    }
+
+    .title-welcome{
+        font-size: clamp(2rem, 5vw, 3rem);
+    }
     
     .title-breakline {
         width: clamp(65vw, 80vw, 10rem);
+    }
+
+    .text-welcome {
+        font-size: clamp(1.1rem, 5vw, 1.2rem);
     }
 
     .logo-large {
@@ -548,6 +605,10 @@ nav {
 @media screen and (max-width: 25em) {
     .outer-box {
         width: 100%;
+    }
+
+    .intro-box {
+        width: min(85%, 60rem);
     }
 
     /*Garden page*/

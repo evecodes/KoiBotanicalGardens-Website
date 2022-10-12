@@ -19,3 +19,5 @@
  Update 08 - Refined the CSS in all sections, made beginning to mobile version website.
 
  Update 09 - Added base mobile menu, added more mobile version media query CSS.
+
+ Update 10 - More mobile CSS added, added responsive CSS.
