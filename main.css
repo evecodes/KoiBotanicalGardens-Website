@@ -347,6 +347,9 @@ nav {
 .inner-box {
     margin: 3rem auto;
     width: 80%;
+}
+
+.inner-box > p {
     font-size: 1.5rem;
     font-weight: 400;
     font-style: normal;
@@ -465,42 +468,44 @@ nav {
         margin: 0;
     }
 
+    .hamburger-menu {
+        cursor: pointer;
+    }
+
     .hamburger-stripe {
         position: absolute;
-        top: 20%;
+        top: 40%;
         right: 3%;
         height: 0.3rem;
         width: 2rem;
         border-radius: 3rem;
         background-color: var(--secondary-color);
-        cursor: pointer;
+        z-index: 400;
+    }
+
+    .hamburger-stripe:before, .hamburger-stripe:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 2rem;
+        border-radius: 3rem;
+        height: 0.3rem;
+        background-color: var(--secondary-color);
         z-index: 400;
     }
 
     .hamburger-stripe:before {
-        content: "";
-        position: absolute;
         top: -8px;
-        left: 0;
-        width: 2rem;
-        height: 0.3rem;
-        background-color: var(--key-color-15percent);
     }
 
-    .hambuger-stripe:after {
-        content: "";
-        position: absolute;
-        top: -20px;
-        left: 0;
-        width: 2rem;
-        height: 0.3rem;
-        background-color: var(--secondary-color);
-    } /*Fix missing after*/
+    .hamburger-stripe:after {
+        top: 8px;       
+    }
 
 
-    .hamburger-stripe:hover {
+    /* .hamburger-stripe:hover, .hamburger-stripe:before:hover, .hamburger-stripe:after:hover {
         background-color: var(--main-color);
-    }
+    } */
 
     .nav-hide {
         display: none;
@@ -597,6 +602,22 @@ nav {
         overflow: hidden;
         width: 100%;
     }
+
+    .grid-vertical {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5rem;
+    }
+    
+    .inner-box > p {
+        font-size: 1rem;
+    }
+
+    .button-center {
+        margin: 0.5rem auto;
+    }
+
+
 
     /*Contact page*/
 }

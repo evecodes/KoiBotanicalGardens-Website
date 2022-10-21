@@ -21,3 +21,5 @@
  Update 09 - Added base mobile menu, added more mobile version media query CSS.
 
  Update 10 - More mobile CSS added, added responsive CSS.
+
+ Update 11 - More responsive CSS.
