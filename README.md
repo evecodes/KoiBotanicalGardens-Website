@@ -23,3 +23,5 @@
  Update 10 - More mobile CSS added, added responsive CSS.
 
  Update 11 - More responsive CSS.
+
+ Update 12 - More responsive CSS on Contact page.

@@ -420,6 +420,8 @@ nav {
     font-size: 1.5rem;
 }
 
+/*Fix placement issue with hovertext*/
+
 .hovertext:hover:before {
     opacity: 1;
     visibility: visible;
@@ -447,6 +449,21 @@ nav {
     .title-section {
         font-size: 2rem;
         text-align: center;        
+    }
+
+    .button-variation {
+        cursor: pointer;
+        font-size: 1.2rem;
+        font-family: brandon-grotesque, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        width: 10rem;
+        height: 2rem;
+        border: none;
+        border-radius: 10rem;
+        color: var(--secondary-color);
+        background-color: var(--main-color);
+        white-space: nowrap;
     }
 
     /*LOGO top left, desktop/mobile*/
@@ -618,8 +635,31 @@ nav {
     }
 
 
-
     /*Contact page*/
+   
+    .info-block {
+        align-items: flex-start;
+        justify-content: start;
+        /* margin-bottom: 1.5rem; */
+        /* margin: 1.5rem auto 0 auto; */
+    }
+    
+    .info-block > h4 {
+        margin-top: 2.3rem;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        font-style: normal;
+    }
+    
+    .info-block > p {
+        font-size: 1rem;
+    }
+
+    .icon-small {
+        padding-right: 0.1rem;
+        height: 2rem;
+    }
 }
 
 
