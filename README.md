@@ -27,3 +27,5 @@
  Update 12 - More responsive CSS on Contact page.
 
  Update 13 - More responsive CSS.
+
+ Update 14 - JS interactivity parts added.

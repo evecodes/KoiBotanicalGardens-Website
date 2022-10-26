@@ -491,6 +491,7 @@ nav {
         justify-content: center;
         align-items: center;
         margin: 0;
+        padding: 0;
     }
 
     .hamburger-menu {
@@ -511,7 +512,7 @@ nav {
         border-radius: 3rem;
         background-color: var(--secondary-color);
         z-index: 400;
-        mix-blend-mode: difference;
+        /* mix-blend-mode: difference; */
     }
 
     .hamburger-stripe:before, .hamburger-stripe:after {
@@ -531,6 +532,40 @@ nav {
 
     .hamburger-stripe:after {
         top: 8px;       
+    }
+
+    .stripe-active {
+        height: 0.3rem;
+        width: 2rem;
+        position: absolute;
+        top: 30%;
+        display: inline-block;
+        background-color: transparent;
+        z-index: 400;
+    }
+    
+    .stripe-active:before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 0;
+        height: 0.3rem;
+        width: 2rem;
+        background-color: var(--secondary-color);
+        transform: rotate(-45deg);
+        transition: transform 100ms ease-out;
+    }
+    
+    .stripe-active:after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        height: 0.3rem;
+        width: 2rem;
+        background-color: var(--secondary-color);
+        transform: rotate(45deg);
+        transition: transform 100ms ease-out;
     }
 
 
