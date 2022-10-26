@@ -5,6 +5,7 @@
     --secondary-color: hsl(100, 100%, 100%);
     --secondary-color-30percent: hsla(100, 100%, 100%, 0.3);
     --tertiary-color: hsl(234, 100%, 6%);
+    --tertiary-color-45percent: hsla(234, 100%, 6%, 0.45);
 }
 
 * {
@@ -204,6 +205,10 @@ nav {
     top: 25%;
     left: 2%;
     height: 2rem;
+}
+
+.shadow-darkblue {
+    filter: drop-shadow(0 0 2px var(--tertiary-color-45percent));
 }
 
 
@@ -477,9 +482,9 @@ nav {
     /*LOGO top left, desktop/mobile*/
 
     /*Nav*/
-    /* nav {
-        background-color: var(--secondary-color-30percent);
-    } */
+    .logo-small {        
+        top: 15%;        
+    }
 
     .navbar {
         position: fixed;
