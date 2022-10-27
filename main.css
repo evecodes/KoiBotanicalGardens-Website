@@ -189,7 +189,7 @@ nav {
     justify-content: flex-end;
     align-items: center;
     width: 100%;
-    /* background-color: var(--key-color); */
+    background-color: transparent;
 }
 
 .nav-active {
@@ -581,6 +581,9 @@ nav {
     .nav-hide {
         display: none;
         visibility: hidden;
+        background-color: transparent;
+        /* opacity: 0;
+        transition: all 200ms ease-in; */
     } /*JS class*/
 
     /* Hamburger stripe white on picture, stripe black on normal, JS?*/
