@@ -29,3 +29,5 @@
  Update 13 - More responsive CSS.
 
  Update 14 - JS interactivity parts added.
+
+ Update 15 - Responsive text added.

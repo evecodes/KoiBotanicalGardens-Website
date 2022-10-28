@@ -32,6 +32,10 @@ function navHideDelay() {
     hamburgerStripe.classList.toggle('stripe-active');
 }
 
+
+/*Idea: Reverse observer combined with data true/false?*/
+
+
 // window.onscroll = function () {
 //     let isScrolled = false;
 //     const navBar = document.querySelector('#navbar')
@@ -52,7 +56,6 @@ function navHideDelay() {
 //     onScroll();
 //     return onScroll;
 // }
-
 
 
 /*ALT version scroll*/
