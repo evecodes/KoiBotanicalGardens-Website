@@ -32,8 +32,25 @@ function navHideDelay() {
     hamburgerStripe.classList.toggle('stripe-active');
 }
 
+//Changing navigation on scroll//
+const navBar = document.querySelector('#navbar');
+const navTag = document.querySelector('#nav-tag').getBoundingClientRect().top;
 
-/*Idea: Reverse observer combined with data true/false?*/
+window.addEventListener('scroll', e => {
+    if(window.scrollY > navTag) {
+        console.log('berry');
+        navBar.style.backgroundColor = 'var(--key-color';
+    } 
+    else {
+        navBar.style.backgroundColor = 'transparent';
+        console.log('dragon');
+    }
+})
+
+/*To add: data attributes true/false for desktop/mobile version
+& to add, change <a> to different color on hover
+& fix height vs function*/
+
 
 
 // window.onscroll = function () {
