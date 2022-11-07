@@ -31,3 +31,5 @@
  Update 14 - JS interactivity parts added.
 
  Update 15 - Responsive text added.
+
+ Update 16 - Base changing style for nav added.

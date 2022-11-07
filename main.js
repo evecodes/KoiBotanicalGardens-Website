@@ -7,111 +7,50 @@ const linkTea = document.querySelector(".tea-button");
 const linkContact = document.querySelector(".contact-button");
 
 hamburgerMenu.addEventListener('click', e => {
-    navToggle.classList.toggle('nav-hide');
-    hamburgerStripe.classList.toggle('stripe-active');
+    navActivate();
 });
 
 linkHome.addEventListener('click', e => {
-    timeout = setTimeout(navHideDelay, 200);
+    timeout = setTimeout(navActivate, 200);
 })
 
 linkGarden.addEventListener('click', e => {
-    timeout = setTimeout(navHideDelay, 200);
+    timeout = setTimeout(navActivate, 200);
 })
 
 linkTea.addEventListener('click', e => {
-    timeout = setTimeout(navHideDelay, 200);
+    timeout = setTimeout(navActivate, 200);
 })
 
 linkContact.addEventListener('click', e => {
-    timeout = setTimeout(navHideDelay, 200);
+    timeout = setTimeout(navActivate, 200);
 })
 
-function navHideDelay() {
+function navActivate() {
     navToggle.classList.toggle('nav-hide');
     hamburgerStripe.classList.toggle('stripe-active');
 }
 
+
 //Changing navigation on scroll//
-const navBar = document.querySelector('#navbar');
-const navTag = document.querySelector('#nav-tag').getBoundingClientRect().top;
 
-window.addEventListener('scroll', e => {
-    if(window.scrollY > navTag) {
-        console.log('berry');
-        navBar.style.backgroundColor = 'var(--key-color';
-    } 
-    else {
-        navBar.style.backgroundColor = 'transparent';
-        console.log('dragon');
-    }
-})
+const mainTitle = document.querySelector("[data-title]");
+const navMenu = document.querySelector("[data-top]");
 
-/*To add: data attributes true/false for desktop/mobile version
-& to add, change <a> to different color on hover
-& fix height vs function*/
+const navObserverOptions = {
+    root: null,
+    threshold: 0,
+    rootMargin: "-10% 0% 0% 0%",
+}
 
+const navObserver = new IntersectionObserver (entries => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            navMenu.setAttribute('data-navchange', 'active');
+        } else {
+            navMenu.removeAttribute('data-navchange', 'active');
+        }
+    })
+}, navObserverOptions);
 
-
-// window.onscroll = function () {
-//     let isScrolled = false;
-//     const navBar = document.querySelector('#navbar')
-//     const navBarPoint = 600;
-
-//     function onScroll () {
-//         if (window.scrollY >= navBarPoint && !isScrolled) {
-//             console.log('peach')
-//             navBar.style.backgroundColor = 'var(--key-color';
-//             isScrolled = true;
-//         } else if (window.scrollY <= navBarPoint && !isScrolled) {
-//             navBar.style.backgroundColor = 'transparent';
-//             console.log('banana');
-//             isScrolled = false;
-//         } 
-//     }
-
-//     onScroll();
-//     return onScroll;
-// }
-
-
-/*ALT version scroll*/
-
-// const navBar = document.querySelector('#navbar')
-// const navBarPoint = 600;
-
-// window.addEventListener('scroll', e => {
-//     if (window.scrollY >= navBarPoint ) {
-//         console.log('peach')
-//         navBar.style.backgroundColor = 'var(--key-color';
-//     } else {
-//         navBar.style.backgroundColor = 'transparent';
-//         console.log('banana');
-//     }    
-// })
-
-/*Change?*/
-
-
-
-/*ALT save*/
-
-// linkGarden.addEventListener('click', e => {
-//     navToggle.classList.toggle('nav-hide');
-//     hamburgerStripe.classList.toggle('stripe-active');
-// })
-
-// linkTea.addEventListener('click', e => {
-//     navToggle.classList.toggle('nav-hide');
-//     hamburgerStripe.classList.toggle('stripe-active');
-// })
-
-// linkHome.addEventListener('click', e => {
-//     navToggle.classList.toggle('nav-hide');
-//     hamburgerStripe.classList.toggle('stripe-active');
-// })
-
-// linkContact.addEventListener('click', e => {
-//     navToggle.classList.toggle('nav-hide');
-//     hamburgerStripe.classList.toggle('stripe-active');
-// })
+navObserver.observe(mainTitle);

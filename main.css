@@ -198,8 +198,15 @@ nav {
     justify-content: flex-end;
     align-items: center;
     width: 100%;
+}
+
+[data-nav="transparent"] {
     background-color: transparent;
     transition: background-color 200ms ease-in-out;
+}
+
+[data-navchange="active"] {
+    background-color: var(--key-color);
 }
 
 .nav-active {
