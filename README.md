@@ -33,3 +33,5 @@
  Update 15 - Responsive text added.
 
  Update 16 - Base changing style for nav added.
+
+ Update 17 - JS media query for changing nav style with observer added.

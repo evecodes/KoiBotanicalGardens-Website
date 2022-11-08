@@ -6,6 +6,9 @@ const linkGarden = document.querySelector(".garden-button");
 const linkTea = document.querySelector(".tea-button");
 const linkContact = document.querySelector(".contact-button");
 
+
+//Hamburger menu//
+
 hamburgerMenu.addEventListener('click', e => {
     navActivate();
 });
@@ -53,4 +56,20 @@ const navObserver = new IntersectionObserver (entries => {
     })
 }, navObserverOptions);
 
-navObserver.observe(mainTitle);
+
+//Media query for changing navigation observer//
+
+const mediaQueryLandscape = window.matchMedia('(min-width: 46em)')
+
+function widthChange(mediaQueryLandscape) {
+    if (mediaQueryLandscape.matches) {
+        navObserver.observe(mainTitle);
+    } else {
+        navObserver.unobserve(mainTitle);
+        navMenu.removeAttribute('data-navchange', 'active');
+    }
+};
+
+widthChange(mediaQueryLandscape);
+
+mediaQueryLandscape.addEventListener('change', widthChange);
