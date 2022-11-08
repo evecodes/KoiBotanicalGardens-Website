@@ -11,6 +11,7 @@
     --text-title-sub-size: clamp(1.4rem, 3vw, 2.2rem);
     --text-intro-size: clamp(1.2rem, 3vw, 1.7rem);
     --text-paragraph-size: clamp(1rem, 2vw, 1.5rem);
+    --button-text-size: clamp(1.2rem, 2vw, 1.6rem);
     /*welcome title var, margin welcome var, buttons var*/
 }
 
@@ -135,13 +136,13 @@ a:hover {
 }
 
 
-.button-regular {
+.button-regular, .button-variation {
     cursor: pointer;
-    font-size: 1.6rem;
+    font-size: var(--button-text-size);
     font-family: brandon-grotesque, sans-serif;
     font-weight: 700;
     font-style: normal;
-    width: 15rem;
+    width: 15rem; /*responsive wanted, padding?*/
     height: 4rem;
     border: none;
     border-radius: 10rem;
@@ -152,20 +153,6 @@ a:hover {
 .button-regular:hover {
     color: var(--secondary-color);
     background-color: var(--key-color);
-}
-
-.button-variation {
-    cursor: pointer;
-    font-size: 1.6rem;
-    font-family: brandon-grotesque, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    width: 15rem;
-    height: 4rem;
-    border: none;
-    border-radius: 10rem;
-    color: var(--secondary-color);
-    background-color: var(--main-color);    
 }
 
 .button-variation:hover {
@@ -208,6 +195,8 @@ nav {
 [data-navchange="active"] {
     background-color: var(--key-color);
 }
+
+/*changing a hover link color to be added*/
 
 .nav-active {
     border-bottom: 0.2rem solid var(--secondary-color);
@@ -479,20 +468,19 @@ nav {
         text-align: center;        
     }
 
-    .button-regular {        
-        font-size: 1.2rem;        
-        width: 10rem;
+    .button-regular, .button-variaton {        
+        font-size: 1.2rem;
         height: 3rem;        
         border-radius: 10rem;        
         white-space: nowrap;
     }
 
+    .button-regular {
+        width: 10rem;
+    }
+
     .button-variation {        
-        font-size: 1.2rem;
-        width: 10.5rem;
-        height: 3rem;
-        border-radius: 10rem;
-        white-space: nowrap;
+        width: 10.5rem;        
     }
 
     /*LOGO top left, desktop/mobile*/
