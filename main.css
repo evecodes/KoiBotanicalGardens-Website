@@ -13,6 +13,7 @@
     --text-paragraph-size: clamp(1rem, 2vw, 1.5rem);
     --button-text-size: clamp(1.2rem, 2vw, 1.6rem);
     /*welcome title var, margin welcome var, buttons var*/
+    /*overlay hover button social media check*/
 }
 
 * {
@@ -142,9 +143,8 @@ a:hover {
     font-family: brandon-grotesque, sans-serif;
     font-weight: 700;
     font-style: normal;
-    width: 15rem; /*responsive wanted, padding?*/
-    height: 4rem;
     border: none;
+    padding: 1rem 3rem 1rem 3rem;
     border-radius: 10rem;
     color: var(--secondary-color);
     background-color: var(--main-color);
@@ -341,7 +341,8 @@ nav {
 
 .grid-vertical {
     display: grid;
-    grid-template: 1fr 28rem 6rem / 1fr;
+    /* grid-template: 1fr 28rem 6rem / 1fr; */
+    grid-template: 1fr 35rem 4rem / 1fr;
     margin-bottom: 1rem;
 }
 
@@ -446,6 +447,22 @@ nav {
 
 
 /*Media queries*/
+@media screen and (max-width: 65em){
+    /*Tea page*/
+    .grid-vertical {        
+        grid-template: 1fr 30rem 3rem / 1fr;        
+    }    
+}
+
+@media screen and (max-width: 53em){
+    /*Tea page*/
+    .grid-vertical {        
+        grid-template: 1fr 25rem 3rem / 1fr;        
+    }    
+    /*margin bottom tea page adjust*/
+    /*margin bottom contact page check*/
+}
+
 
 @media screen and (max-width: 46rem) {
 
@@ -468,19 +485,19 @@ nav {
         text-align: center;        
     }
 
-    .button-regular, .button-variaton {        
+    .button-regular, .button-variation {        
         font-size: 1.2rem;
-        height: 3rem;        
-        border-radius: 10rem;        
+        border-radius: 10rem;
+        /* padding: 0.8rem 2.5rem 0.8rem 2.5rem; */
         white-space: nowrap;
     }
 
     .button-regular {
-        width: 10rem;
+        padding: 0.8rem 2.5rem 0.8rem 2.5rem;
     }
 
-    .button-variation {        
-        width: 10.5rem;        
+    .button-variation {
+        padding: 0.8rem 1.5rem 0.8rem 1.5rem;
     }
 
     /*LOGO top left, desktop/mobile*/
@@ -773,7 +790,8 @@ nav {
 
     .outer-box-contact {
         margin: 0 auto;
-        width: clamp(60%, 15vw, 30rem);
+        /* width: clamp(60%, 15vw, 30rem); */
+        width: 80%;
     }
 }
 
