@@ -98,9 +98,16 @@ a:hover {
 .flex-row {
     display: flex;
     flex-direction: row;
-    /* align-items: flex-start; */ 
-    /* justify-content: flex-start; */
+    /* align-items: normal; */
+    /* justify-content: normal; */
     /* No align/justify Safari issue?*/
+}
+
+/*for flex Safari to prevent img stretch*/
+.title-box > img, .home-img > img, .card > img, .card-image > img {
+    align-items: flex-start;    
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .title-section {
@@ -233,7 +240,7 @@ nav {
     height: 100%;
     width: 100%;
     object-fit: cover;
-} /*single img selector for all img properties*/
+}
 
 .logo-large {
     height: clamp(2rem, 4vw, 5rem);
@@ -612,9 +619,10 @@ nav {
 
     /*Home page*/
     h1 {
-        font-size: clamp(2rem, 15vw, 5.5rem);
+        font-size: clamp(2rem, 15vw, 3.5rem);
         text-align: left;
         white-space: normal;
+        max-width: min-content;
         /* padding: 0; */
     }
 
@@ -760,6 +768,16 @@ nav {
     }
 }
 
+@media screen and (max-width: 46rem) and (orientation: landscape) {
+    h1 {
+        font-size: clamp(2rem, 6vw, 3.5rem);
+        max-width: 100%;
+    }
+
+    .outer-box-title {
+        text-align: center;
+    }
+}
 
 @media screen and (max-width: 25em) {
     .outer-box {
