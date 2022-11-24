@@ -35,6 +35,31 @@ function navActivate() {
 }
 
 
+//Hamburger menu switch off when changing screen size//
+
+const mediaQueryMobileOff = window.matchMedia('(max-width: 46em)');
+
+function navMenuChange(mediaQueryMobileOff) {
+    if (mediaQueryMobileOff.matches) {
+        return;
+    } else {
+        navToggle.classList.add('nav-hide');
+        hamburgerStripe.classList.remove('stripe-active');
+    }
+}
+
+navMenuChange(mediaQueryMobileOff);
+
+mediaQueryMobileOff.addEventListener('change', navMenuChange);
+
+
+//Nav and anchor tag height offset//
+
+const navHeight = document.querySelector('[data-top]').offsetHeight;
+
+document.documentElement.style.setProperty('--scroll-padding', navHeight + 5 + "px");
+
+
 //Changing navigation on scroll//
 
 const mainTitle = document.querySelector("[data-title]");
@@ -50,8 +75,10 @@ const navObserver = new IntersectionObserver (entries => {
     entries.forEach(entry => {
         if (!entry.isIntersecting) {
             navMenu.setAttribute('data-navchange', 'active');
+            linkHome.classList.remove("underline")
         } else {
             navMenu.removeAttribute('data-navchange', 'active');
+            linkHome.classList.add("underline");
         }
     })
 }, navObserverOptions);
@@ -67,6 +94,9 @@ function widthChange(mediaQueryLandscape) {
     } else {
         navObserver.unobserve(mainTitle);
         navMenu.removeAttribute('data-navchange', 'active');
+        linkHome.classList.remove("underline");
+        navToggle.classList.add('nav-hide');
+        hamburgerStripe.classList.remove('stripe-active');
     }
 };
 

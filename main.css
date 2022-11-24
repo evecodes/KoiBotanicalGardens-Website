@@ -12,18 +12,24 @@
     --text-intro-size: clamp(1.2rem, 3vw, 1.7rem);
     --text-paragraph-size: clamp(1rem, 2vw, 1.5rem);
     --button-text-size: clamp(1.2rem, 2vw, 1.6rem);
-    /*welcome title var, margin welcome var, buttons var*/
-    /*overlay hover button social media check*/
+    /*welcome title var, margin welcome var*/
+    /*changing a hover link color to be added*/
+    /*margin bottom tea page adjust MQ*/
+    /*margin bottom contact page check MQ*/
 }
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+    box-sizing: border-box;    
     /* background: #000 !important;
     color: #0f0 !important;
     outline: solid #f00 1px !important; */
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--scroll-padding, 50px);
 }
 
 h1 {
@@ -35,7 +41,6 @@ h1 {
     text-transform: uppercase;
     text-align: center;
     color:var(--secondary-color);
-    /* padding: 0 1rem; */
     white-space: nowrap;
     z-index: 85;
 }
@@ -70,6 +75,10 @@ a {
 
 a:hover {
     color: var(--key-color);
+}
+
+.underline {
+    border-bottom: 0.2rem solid var(--key-color);
 }
 
 .text-highlight {
@@ -132,9 +141,7 @@ a:hover {
 .grid-horizontal {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* grid-template: 300px 300px / 1fr 1fr 1fr; */
     overflow: hidden;
-    /* width: 100%; */
 }
 
 .grid-horizontal-narrow {
@@ -143,6 +150,12 @@ a:hover {
     overflow: hidden;
 }
 
+.icon-box {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    padding-bottom: 1rem;
+}
 
 .button-regular, .button-variation {
     cursor: pointer;
@@ -203,8 +216,6 @@ nav {
     background-color: var(--key-color);
 }
 
-/*changing a hover link color to be added*/
-
 .nav-active {
     border-bottom: 0.2rem solid var(--secondary-color);
 }
@@ -232,7 +243,7 @@ nav {
     top: 0;
     height: 85%;
     width: 100%;
-    z-index: -1; /* TO CHANGE ?*/
+    z-index: -1;
     overflow: hidden;
 }
 
@@ -428,24 +439,22 @@ nav {
 
 .hovertext:before {
     position: absolute;
-    top: 55%;
-    left: 25%;
+    top: 75%;
+    left: 40%;
     content: attr(data-hover);
     visibility: hidden;
     white-space: nowrap;
     opacity: 0;
     color: var(--main-color);
     background-color: var(--secondary-color);
-    border-radius: 6rem;
-    /* border: 1px solid var(--main-color); */
+    border-radius: 5px;
+    border: 1px solid var(--main-color);
     text-align: center;
-    padding: 0.3rem 1rem;
+    padding: 0.2rem 1rem;
     transition: opacity 200ms ease-in-out;
     z-index: 400;
-    font-size: 1.5rem;
+    font-size: var(--button-text-size);
 }
-
-/*Fix placement issue with hovertext*/
 
 .hovertext:hover:before {
     opacity: 1;
@@ -465,9 +474,7 @@ nav {
     /*Tea page*/
     .grid-vertical {        
         grid-template: 1fr 25rem 3rem / 1fr;        
-    }    
-    /*margin bottom tea page adjust*/
-    /*margin bottom contact page check*/
+    }
 }
 
 
@@ -495,7 +502,6 @@ nav {
     .button-regular, .button-variation {        
         font-size: 1.2rem;
         border-radius: 10rem;
-        /* padding: 0.8rem 2.5rem 0.8rem 2.5rem; */
         white-space: nowrap;
     }
 
@@ -506,8 +512,6 @@ nav {
     .button-variation {
         padding: 0.8rem 1.5rem 0.8rem 1.5rem;
     }
-
-    /*LOGO top left, desktop/mobile*/
 
     /*Nav*/
     .logo-small {        
@@ -531,11 +535,6 @@ nav {
         cursor: pointer;
     }
 
-    /* .color-black > span, .color-black > span:before, .color-black > span:after {
-        background-color: black;
-        mix-blend-mode: difference;
-    } */
-
     .hamburger-stripe {
         position: absolute;
         top: 40%;
@@ -545,7 +544,6 @@ nav {
         border-radius: 3rem;
         background-color: var(--secondary-color);
         z-index: 400;
-        /* mix-blend-mode: difference; */
     }
 
     .hamburger-stripe:before, .hamburger-stripe:after {
@@ -601,11 +599,6 @@ nav {
         transition: transform 100ms ease-out;
     }
 
-
-    /* .hamburger-stripe:hover, .hamburger-stripe:before:hover, .hamburger-stripe:after:hover {
-        background-color: var(--main-color);
-    } */
-
     .nav-hide {
         display: none;
         visibility: hidden;
@@ -614,8 +607,6 @@ nav {
         transition: all 200ms ease-in; */
     } /*JS class*/
 
-    /* Hamburger stripe white on picture, stripe black on normal, JS?*/
-
 
     /*Home page*/
     h1 {
@@ -623,7 +614,6 @@ nav {
         text-align: left;
         white-space: normal;
         max-width: min-content;
-        /* padding: 0; */
     }
 
     .outer-box-title {
@@ -700,12 +690,9 @@ nav {
 
 
     /*Tea page*/
-    .grid-horizontal {
-        /* display: grid; */
-        grid-template-columns: 1fr;
-        /* grid-template-rows: 1fr 1fr 1fr; */
-        overflow: hidden;
-        /* width: 100%; */
+    .grid-horizontal {       
+        grid-template-columns: 1fr;        
+        overflow: hidden;        
     }
 
     .grid-vertical {
@@ -735,9 +722,7 @@ nav {
    
     .info-block {
         align-items: flex-start;
-        justify-content: start;
-        /* margin-bottom: 1.5rem; */
-        /* margin: 1.5rem auto 0 auto; */
+        justify-content: start;        
     }
     
     .info-block > h4 {
@@ -766,6 +751,12 @@ nav {
         margin-top: 2rem;
         padding-bottom: 4rem;
     }
+
+    .hovertext:before {
+        top: 80%;
+        padding: 0.1rem 0.8rem;
+        font-size: 1.2rem;
+    }
 }
 
 @media screen and (max-width: 46rem) and (orientation: landscape) {
@@ -779,7 +770,7 @@ nav {
     }
 }
 
-@media screen and (max-width: 25em) {
+@media screen and (max-width: 26em) {
     .outer-box {
         width: 100%;
     }
@@ -808,8 +799,17 @@ nav {
 
     .outer-box-contact {
         margin: 0 auto;
-        /* width: clamp(60%, 15vw, 30rem); */
         width: 80%;
+    }
+
+    .hovertext:before {
+        left: -170%;
+        font-size: 1rem;
+        padding: 0.2rem 0.6rem;
+    }
+
+    .icon-box {
+        padding-bottom: 0;
     }
 }
 
