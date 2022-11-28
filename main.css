@@ -7,15 +7,13 @@
     --tertiary-color: hsl(234, 100%, 6%);
     --tertiary-color-45percent: hsla(234, 100%, 6%, 0.45);
     --text-h1-header-size: clamp(3rem, 7vw, 6rem);
+    --text-title-intro-size: clamp(2rem, 5vw, 3rem);
     --text-title-size: clamp(2rem, 4vw, 2.6rem);
     --text-title-sub-size: clamp(1.4rem, 3vw, 2.2rem);
     --text-intro-size: clamp(1.2rem, 3vw, 1.7rem);
     --text-paragraph-size: clamp(1rem, 2vw, 1.5rem);
     --button-text-size: clamp(1.2rem, 2vw, 1.6rem);
-    /*welcome title var, margin welcome var*/
     /*changing a hover link color to be added*/
-    /*margin bottom tea page adjust MQ*/
-    /*margin bottom contact page check MQ*/
 }
 
 * {
@@ -286,7 +284,7 @@ nav {
 }
 
 .title-welcome {
-    font-size: 3rem;
+    font-size: var(--text-title-intro-size);
     text-align: center;
     color: var(--key-color);
 }
@@ -328,7 +326,6 @@ nav {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* object-position: left bottom; */ /*for rose garden*/
 }
 
 .card-title {
@@ -467,13 +464,31 @@ nav {
     /*Tea page*/
     .grid-vertical {        
         grid-template: 1fr 30rem 3rem / 1fr;        
-    }    
+    } 
+    
+    .margin-bottom {
+        margin-bottom: 9rem;
+    }
+
+    /*Contact page*/
+    .color-box {
+        padding-bottom: 3rem;
+    }
 }
 
 @media screen and (max-width: 53em){
     /*Tea page*/
     .grid-vertical {        
         grid-template: 1fr 25rem 3rem / 1fr;        
+    }
+
+    .margin-bottom {
+        margin-bottom: 7rem;
+    }
+
+    /*Contact page*/
+    .color-box {
+        padding-bottom: 1rem;
     }
 }
 
@@ -627,7 +642,7 @@ nav {
     }
 
     .title-welcome{
-        font-size: clamp(2rem, 5vw, 3rem);
+        font-size: var(--text-title-intro-size);
     }
     
     .title-breakline {
@@ -749,7 +764,7 @@ nav {
 
     .color-box {
         margin-top: 2rem;
-        padding-bottom: 4rem;
+        padding-bottom: 2rem;
     }
 
     .hovertext:before {
@@ -786,6 +801,10 @@ nav {
     }
 
     /*Contact page*/
+    .color-box {
+        padding-bottom: 4rem;
+    }
+
     .grid-horizontal-narrow {
         justify-items: start;
         grid-template-columns: 1fr;
@@ -812,22 +831,3 @@ nav {
         padding-bottom: 0;
     }
 }
-
-
-
-
-
-
-/* Reminder notes: 
-    >>Nav height needed Safari
-    >>flex img items within need position Safari 
-    font-family: brandon-grotesque, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-family: brandon-grotesque, sans-serif;
-    font-weight: 400;
-    font-style: italic;
-    font-family: brandon-grotesque, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-*/
