@@ -272,20 +272,20 @@ nav {
 
 /* Home section */
 
-.home-img {
+/* .home-img {
     position: absolute;
     top: 0;
     height: 85%;
     width: 100%;
     z-index: -1;
     overflow: hidden;
-}
+} KEEP */
 
-.home-img > img {
+/* .home-img > img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-}
+} KEEP */
 
 .logo-large {
     height: clamp(2rem, 4vw, 5rem);
@@ -297,9 +297,21 @@ nav {
     flex-direction: column;
     justify-content: end;
     align-items: center;
-    height: 85vh;
-    /* flex-grow: 1; */
+    height: 100vh;
+    background-image: url(icon_img/helena-plate-a6xqGNluz78-unsplash_LARGE.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
+/* .title-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    height: 85vh;
+    flex-grow: 1;
+} KEEP */
 
 .gradient-top {
     display: block;
