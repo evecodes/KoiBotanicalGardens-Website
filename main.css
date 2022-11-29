@@ -74,6 +74,10 @@ a:hover {
     color: var(--changing-link-hover);
 }
 
+.relative {
+    position: relative;
+}
+
 .underline {
     border-bottom: 0.2rem solid var(--key-color);
 }
@@ -106,7 +110,6 @@ a:hover {
     flex-direction: row;
     /* align-items: normal; */
     /* justify-content: normal; */
-    /* No align/justify Safari issue?*/
 }
 
 /*for flex Safari to prevent img stretch*/
@@ -175,6 +178,40 @@ a:hover {
 .button-variation:hover {
     color: var(--key-color);
     background-color: var(--secondary-color);
+}
+
+.hovertext:before, .focus-text:before {
+    position: absolute;    
+    visibility: hidden;
+    white-space: nowrap;
+    opacity: 0;
+    color: var(--main-color);
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    border: 1px solid var(--main-color);
+    text-align: center;
+    padding: 0.2rem 1rem;
+    transition: opacity 200ms ease-in-out;
+    z-index: 400;
+    font-size: var(--button-text-size);
+}
+
+.hovertext:before {
+    top: 75%;
+    left: 40%;
+    content: attr(data-hover);
+}
+
+.focus-text:before {
+    top: 17%;
+    left: 0%;
+    right: 0%;
+    content: attr(data-focus);
+}
+
+.hovertext:hover:before, .focus-text:focus:before {
+    opacity: 1;
+    visibility: visible;
 }
 
 .desktop-hide {
@@ -351,7 +388,7 @@ nav {
 
 .grid-vertical {
     display: grid;
-    grid-template: 1fr 35rem 4rem / 1fr;
+    grid-template: 1fr 34rem 4rem / 1fr;
     margin-bottom: 1rem;
 }
 
@@ -424,36 +461,14 @@ nav {
     margin-top: 2rem;
 }
 
-.relative {
-    position: relative;
-}
-
-.hovertext:before {
-    position: absolute;
-    top: 75%;
-    left: 40%;
-    content: attr(data-hover);
-    visibility: hidden;
-    white-space: nowrap;
-    opacity: 0;
-    color: var(--main-color);
-    background-color: var(--secondary-color);
-    border-radius: 5px;
-    border: 1px solid var(--main-color);
-    text-align: center;
-    padding: 0.2rem 1rem;
-    transition: opacity 200ms ease-in-out;
-    z-index: 400;
-    font-size: var(--button-text-size);
-}
-
-.hovertext:hover:before {
-    opacity: 1;
-    visibility: visible;
-}
-
 
 /*Media queries*/
+@media screen and (min-width: 95em){
+    .grid-vertical {        
+        grid-template: 1fr 28rem 4rem / 1fr;        
+    } 
+}
+
 @media screen and (max-width: 65em){
     /*Tea page*/
     .grid-vertical {        
@@ -485,7 +500,6 @@ nav {
         padding-bottom: 1rem;
     }
 }
-
 
 @media screen and (max-width: 46rem) {
 
