@@ -37,3 +37,5 @@
  Update 17 - JS media query for changing nav style with observer added.
 
  Update 18 - Misc adjustments and changes, and added JS for nav and anchor tags.
+
+ Update 19 - More JS for nav menu added.

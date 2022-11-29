@@ -13,7 +13,6 @@
     --text-intro-size: clamp(1.2rem, 3vw, 1.7rem);
     --text-paragraph-size: clamp(1rem, 2vw, 1.5rem);
     --button-text-size: clamp(1.2rem, 2vw, 1.6rem);
-    /*changing a hover link color to be added*/
 }
 
 * {
@@ -72,7 +71,7 @@ a {
 }
 
 a:hover {
-    color: var(--key-color);
+    color: var(--changing-link-hover);
 }
 
 .underline {
@@ -347,16 +346,11 @@ nav {
     font-style: normal;
 }
 
-.translateY-up{
-    transform: translateY(-10%);
-} /*Might get redundant*/
-
 
 /*Tearoom section*/
 
 .grid-vertical {
     display: grid;
-    /* grid-template: 1fr 28rem 6rem / 1fr; */
     grid-template: 1fr 35rem 4rem / 1fr;
     margin-bottom: 1rem;
 }
@@ -497,11 +491,11 @@ nav {
 
     a {
         font-size: 2rem;
-        color: var(--main-color);
+        color: var(--secondary-color);
     }
 
     a:hover {
-        color: var(--secondary-color);
+        color: var(--main-color);
     }
 
     .title-margin {

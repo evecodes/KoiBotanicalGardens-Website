@@ -57,8 +57,6 @@ mediaQueryMobileOff.addEventListener('change', navMenuChange);
 
 const navHeight = document.querySelector('[data-top]').offsetHeight;
 
-document.documentElement.style.setProperty('--scroll-padding', navHeight + 5 + "px");
-
 
 //Changing navigation on scroll//
 
@@ -76,27 +74,31 @@ const navObserver = new IntersectionObserver (entries => {
         if (!entry.isIntersecting) {
             navMenu.setAttribute('data-navchange', 'active');
             linkHome.classList.remove("underline")
+            document.documentElement.style.setProperty('--changing-link-hover', 'hsl(0, 0%, 0%)');
         } else {
             navMenu.removeAttribute('data-navchange', 'active');
             linkHome.classList.add("underline");
+            document.documentElement.style.setProperty('--changing-link-hover', 'hsl(42, 100%, 50%)');
         }
     })
 }, navObserverOptions);
 
 
-//Media query for changing navigation observer//
+//Media query for changing navigation observer, anchor tags and menu//
 
 const mediaQueryLandscape = window.matchMedia('(min-width: 46em)')
 
 function widthChange(mediaQueryLandscape) {
     if (mediaQueryLandscape.matches) {
         navObserver.observe(mainTitle);
+        document.documentElement.style.setProperty('--scroll-padding', navHeight + 10 + "px");
     } else {
         navObserver.unobserve(mainTitle);
         navMenu.removeAttribute('data-navchange', 'active');
         linkHome.classList.remove("underline");
         navToggle.classList.add('nav-hide');
         hamburgerStripe.classList.remove('stripe-active');
+        document.documentElement.style.setProperty('--scroll-padding', navHeight - 20 + "px");
     }
 };
 
