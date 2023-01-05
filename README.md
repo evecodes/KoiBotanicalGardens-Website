@@ -41,3 +41,5 @@
  Update 19 - More JS for nav menu added.
 
  Update 20 - Button focus added, media query large screens added.
+
+ Update 21 - Button focus JS for Safari added, changed font size text mobile version.

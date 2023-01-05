@@ -458,13 +458,15 @@ nav {
 }
 
 
-/*Media queries*/
+/*---Media queries---*/
+/*Desktop wide screen query*/
 @media screen and (min-width: 95em){
     .grid-vertical {        
         grid-template: 1fr 28rem 4rem / 1fr;        
     } 
 }
 
+/*Query medium*/
 @media screen and (max-width: 65em){
     /*Tea page*/
     .grid-vertical {        
@@ -497,6 +499,7 @@ nav {
     }
 }
 
+/*Mobile query medium-small*/
 @media screen and (max-width: 46rem) {
 
     a {
@@ -679,7 +682,8 @@ nav {
     .card {
         width: auto;
         margin: auto;
-        height: 40rem;
+        height: auto;
+        min-height: 40rem;
         background-color: var(--key-color-15percent);
         border-radius: 0rem;
         overflow: hidden;
@@ -687,24 +691,26 @@ nav {
     }
 
     .card-title {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 
     .card-image {
-        /* object-fit: cover; */
-        height: 50%;
+        object-fit: cover;
+        height: 20rem;
+        /* height: 50%; */
         width: 100%;
         overflow: hidden;
     }
 
     .card-text {
-        margin: auto;
+        padding: 2rem;
+        /* margin: auto; */
         text-align: left;
-        width: 80%;
+        width: 100%;
     }
 
     .card-text > p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
 
@@ -725,7 +731,7 @@ nav {
     }
     
     .inner-box > p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .button-center {
@@ -753,7 +759,7 @@ nav {
     }
     
     .info-block > p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .icon-small {
@@ -789,7 +795,8 @@ nav {
     }
 }
 
-@media screen and (max-width: 26em) {
+/*Narrow mobile query*/
+@media screen and (max-width: 27em) {
     .outer-box {
         width: 100%;
     }

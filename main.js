@@ -105,3 +105,14 @@ function widthChange(mediaQueryLandscape) {
 widthChange(mediaQueryLandscape);
 
 mediaQueryLandscape.addEventListener('change', widthChange);
+
+
+//Button focus for Safari//
+
+const BtnFocusText = document.querySelectorAll(".focus-text");
+
+BtnFocusText.forEach(entry => {
+    entry.addEventListener('click', e => {
+        entry.focus({focusVisible: true});
+    })
+});
