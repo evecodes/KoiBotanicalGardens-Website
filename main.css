@@ -656,9 +656,9 @@ nav {
         width: clamp(65vw, 80vw, 10rem);
     }
 
-    .text-welcome {
+    /* .text-welcome {
         font-size: clamp(1.1rem, 5vw, 1.2rem);
-    }
+    } */
 
     .logo-large {
         height: 2rem;
