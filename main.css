@@ -291,7 +291,7 @@ nav {
     justify-content: end;
     align-items: center;
     height: 100vh;
-    height: 100dvh;
+    /* height: 100dvh; */
     background-image: url(icon_img/helena-plate-a6xqGNluz78-unsplash_LARGE.jpg);
     background-position: center;
     background-size: cover;
